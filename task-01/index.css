@@ -1,7 +1,5 @@
 body{
-    margin :2px;
-    background-color: rgb(211, 209, 209);
-
+    margin :0px;
 }
 
 nav{
@@ -13,14 +11,22 @@ nav{
     display: flex;    /*   allow to move freely in nav container   */
     column-gap: 4px;
 }
+
+
 #head{
     display: flex;
+    background-color: rgba(251, 219, 159, 0.786);
+
     justify-content: center;
     
 }
+
+
 #shopify-logo{
     height: 7rem;
 }
+
+
 .nav-button{
     padding: 20px;
     border: 1px solid rgb(16, 16, 16);
@@ -29,7 +35,74 @@ nav{
     text-decoration: none;      
 }
 
-footer{
 
+main{
+        background-color: rgba(251, 219, 159, 0.786);
+
+}
+
+#hero{
+    background-color: rgb(242, 179, 62);      /*  hero gradient to make different form other section*/
+    min-height: 20rem;
+
+    display: flex;  /* flex to make content in same line*/
+}
+
+#hero-image{
+    width: 50rem;
+}
+
+#hero-content{
+        padding:10% 10%;
+}
+
+
+
+#values{
+    min-height: 20rem;
+    font-size: larger;
+    font-weight: 500;
+    justify-items: center;
+    padding: 20px;
+}
+
+#product-highlight{
+    min-height: 20rem;
+    font-size: larger;
+    font-weight: 500;
+    justify-items: center; 
+}
+
+
+#container{
+justify-content: center ;
+display: flex;
+column-gap: 40px;
+padding: 30px;
+}
+
+
+.card{
+    background-color: rgb(245, 237, 226);
+    max-width: 400px;
+    min-height: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    column-gap: 30px;     
+
+}
+footer{
+    background-color: black;
+    color: white;
     align-content: end;
 }
+
+/* Common button shape and color for entier shopify site */
+button{    
+    background-color:rgb(226, 89, 43);
+    color: aliceblue;
+    padding: 10px;
+    border-color: rgba(249, 194, 93, 0.615);
+
+}
+
