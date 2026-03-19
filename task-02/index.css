@@ -1,0 +1,48 @@
+body{
+    background-color: rgb(216, 252, 240);
+    margin:0px;    
+}
+
+header{
+    background-color: rgb(245, 122, 46);
+    min-height: 5em;
+    justify-items: center;
+    align-content : center;
+    color: #000;
+}
+
+main{
+    background-color: rgb(214, 212, 212);
+    margin: 20px;
+    border-radius: 20px;
+}
+
+#items{
+    display: flex;
+    gap: 60px;
+    padding: 50px;
+}
+.card-image{
+    width: 400px;
+    height: 400px;
+}
+.card{
+    min-width: 400px;
+    max-width: 450px;
+    background-color: aquamarine;
+    border-radius: 30px;
+    margin: 20px;
+    padding: 30px;
+}
+
+
+.card-title{
+    font-size: 40px;
+    font-weight: bolder;
+    padding: 30px;
+}
+.card-description{
+    padding: 30px;
+    font-size: 26px;
+    font-weight: 500;
+}
