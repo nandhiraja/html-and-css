@@ -1,9 +1,10 @@
 body{
-    background-color: rgb(216, 252, 240);
+    background-color: rgb(248, 248, 248);
     margin:0px;    
 }
 
 header{
+
     background-color: rgb(245, 122, 46);
     min-height: 5em;
     justify-items: center;
@@ -12,29 +13,45 @@ header{
 }
 
 main{
-    background-color: rgb(214, 212, 212);
-    margin: 20px;
+    background-color: rgb(250, 172, 172);
+    margin: 3% 20%;
     border-radius: 20px;
+    justify-items: center;
+
 }
 
 #items{
     display: flex;
-    gap: 60px;
-    padding: 50px;
+    justify-content: center;
+
 }
 .card-image{
-    width: 400px;
-    height: 400px;
+    width: 25rem;
+    height: 22rem;
+    background-color: azure;
+    transition: transform 0.5s;   
+
 }
 .card{
-    min-width: 400px;
-    max-width: 450px;
     background-color: aquamarine;
-    border-radius: 30px;
+    border-radius: 25px;
     margin: 20px;
     padding: 30px;
+    max-width: 25rem;
+    justify-items: center; 
+    box-shadow: 0 15px 35px -10px ;
+    transition: transform 0.5s ;     /* give smoother transition while hover */ 
 }
 
+/* Hover effect for card change color and  scale */
+.card:hover{
+    background-color: rgb(40, 40, 40);
+    transform: scale(1.02);    /* scale up the card on hovering */
+    color: white;    
+}
+.card:hover .card-image{
+    transform: scale(0.9);    /* scale down the image while hover */
+}
 
 .card-title{
     font-size: 40px;
@@ -42,7 +59,66 @@ main{
     padding: 30px;
 }
 .card-description{
-    padding: 30px;
+    padding: 20px;
     font-size: 26px;
     font-weight: 500;
+}
+
+
+/* responsive UI  for  device  width 500px   */
+
+@media only screen and  (min-width:300px ) {
+    main{
+        background-color: rgba(255, 255, 255, 0) ;
+    }
+    .card{
+        max-width: 15rem;
+        max-height: 25rem;
+        font-size: 12px;
+    }
+    .card-image{
+        width: 15rem;
+        height: 13rem;
+    }
+
+    .card-title{
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 20px;
+}
+.card-description{
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+}
+
+/* responsive UI  for  device  width 800px */
+
+@media only screen and  (min-width:800px) {
+    main{
+        background-color: rgba(255, 255, 255, 0) ;
+    }
+    .card{
+        max-width: 25rem;
+        max-height: 40rem;
+        font-size: 12px;
+    }
+    .card-image{
+        width: 25rem;
+        height: 24rem;
+    }
+
+    .card-title{
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 20px;
+}
+.card-description{
+    padding: 20px;
+    font-size: 26px;
+    font-weight: 500;
+}
+
 }
