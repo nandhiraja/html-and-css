@@ -23,10 +23,9 @@ main{
     color:red;
 }
 #items{
-    display: grid;
-    grid-template-columns: repeat(2,600px);
+    display: grid;    /* allow Grid layout */
+    grid-template-columns: repeat(2,600px);  /* double column with 600px size of each columns */
     height: 100%;
-
 }
 .card-image{
     width: 25rem;
@@ -100,7 +99,7 @@ main{
 }
 #items{
     display: grid;
-    grid-template-columns: repeat(1,400px);
+    grid-template-columns: repeat(1,400px); /* single column with 400px size of columns */
     justify-items:center ;
 }
 
