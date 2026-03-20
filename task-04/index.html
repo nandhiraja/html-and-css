@@ -14,11 +14,44 @@
                 <ul id="navbar">
                     <li><a href="api/home">Home</a></li>
                     <li><a href="api/about">About</a></li>
-                    <li>products</li>
-                    <li>Top Brands</li>
+                    <!-- dropdown -->
+                    <li class="has-sub">
+                        <a>Products</a>
+                        <ul class="dropdown">
+                            <li>Laptop</li>
+                            <!-- Nested sub dropdown -->
+                            <li class="has-sub">       
+                                Mobile   >
+                                <ul class="nested dropdown">
+                                    <li>5G</li>
+                                    <li>4G</li>
+                                </ul>
+                            </li>
+                             <!-- Nested sub dropdown -->
+                            <li class="has-sub">TV  >
+                                <ul class="nested dropdown">
+                                    <li>Smart-TV</li>
+                                    <li>LCD</li>
+                                </ul>
+                            </li>
+                            <li>AC</li>
+                        </ul>
+                    </li>  
+                 <!-- dropdown -->
+                    <li class="has-sub" >
+                        <a>Top Brands </a> 
+                        <ul  class="dropdown">
+                            <li>HP</li>
+                            <li>Samsung</li>
+                            <li>Lenova</li>
+                            <li>Apple</li>
+                        </ul>
+                    </li>
+
                 </ul>               
                
             </nav>
+            
         </header>
     </body>   
 
