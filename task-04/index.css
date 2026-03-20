@@ -1,0 +1,19 @@
+html body{
+    margin: 0px;
+    padding: 0px;
+}
+
+#navbar{
+    display:flex;
+    background-color: rgb(24, 28, 26);
+    color:azure
+}
+#navbar > li{
+    list-style-type: none;   /* remove the bullet in marks */
+    padding :10px;
+}
+#navbar > li > a{
+    text-decoration-line: none;   /* remove the underline in <a> */
+    color: aliceblue;
+}
+
