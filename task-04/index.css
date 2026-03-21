@@ -45,8 +45,9 @@ html body{
     min-width: 8rem;
     visibility: hidden;
     padding: 0px;
-
-}
+    opacity: 0;
+    transform: translateY(10px); 
+    transition: all .4s ease-in;}    /* trasnition effect to slow smooth visible */
 
 .dropdown > li {
     list-style-type: none;   /* remove the bullet in marks */
@@ -71,7 +72,9 @@ html body{
 /*  dropdown and nav button hover effect */
 
 .has-sub:hover > .dropdown{
+        opacity: 1;
         visibility: visible;
+        transform: translateY(0); 
     }
 
 #navbar li:hover >  a{
