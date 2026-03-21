@@ -11,6 +11,82 @@
 - Ensure that the menu looks good on both desktop and mobile (consider using a responsive fallback)
         
 
+## `<ul>` 
+
+
+``` html
+<ul id="navbar">
+    <li><a href="api/home">Home</a></li>
+    <li><a href="api/about">About</a></li>
+    <!-- dropdown -->
+    <li class="has-sub">
+        <a>Products</a>
+        <ul class="dropdown">
+            <li>Laptop</li>
+            <!-- Nested sub dropdown -->
+            <li class="has-sub">       
+                Mobile   >
+                <ul class="nested dropdown">
+                    <li>5G</li>
+                    <li>4G</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+``` 
+
+## Visiblility 
+
+
+``` css
+.dropdown{
+    position: absolute;
+    color: black;
+    background-color: aliceblue;
+    margin-top:10px;
+    min-width: 8rem;
+    visibility: hidden;         //  visibility hidden initialy
+    padding: 0px;
+    opacity: 0;
+    transform: translateY(10px); 
+    transition: all .4s ease-in;
+    }   
+
+```
+## transitions  for smooth reveal effect
+
+``` css
+ 
+.dropdown{
+    position: absolute;
+    color: black;
+    background-color: aliceblue;
+    margin-top:10px;
+    min-width: 8rem;
+    visibility: hidden;
+    padding: 0px;
+
+   /* trasnition effect to slow smooth visible */
+
+    opacity: 0;     
+    transform: translateY(10px); 
+    transition: all .4s ease-in;
+    }    
+
+```
+
+## :hover effect to show dropdown
+
+``` css
+.has-sub:hover > .dropdown{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0); 
+    }
+
+```
+
 
 ## Pure CSS Dropdown Menu 
 
