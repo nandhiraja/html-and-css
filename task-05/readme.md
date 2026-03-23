@@ -38,9 +38,9 @@ the modalʼs visibility
 
 
 ```
+## Desktop view 
 
 ``` css
-## Desktop view 
 
 
 #cart{
