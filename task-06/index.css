@@ -1,0 +1,134 @@
+*{
+    margin :0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  
+    flex: 1;
+    background-image: linear-gradient(90deg, rgb(141, 240, 244),rgb(227, 233, 230));
+}
+
+nav{
+    background-color: rgb(250, 116, 59);
+    min-height: 80px;
+    display: flex;       
+    column-gap:10px;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+
+#head{
+    background-image: linear-gradient(90deg, rgb(10, 238, 246),rgb(4, 241, 107));
+    padding: 20px 60px;
+    border-radius: 20px;
+    text-shadow: 6px 13px 10px rgba(91, 90, 90, 0.595);
+    box-shadow: 4px 3px 40px;
+    
+    /* justify-self: center; */
+    position: relative;
+    left: -7%;      /* aling the title in center */
+    margin: 0 auto;
+    
+}
+
+
+.nav-button{
+  
+    padding: 20px;   
+    border: 1px solid rgb(16, 16, 16);
+    background-color: rgb(36, 36, 35);
+    color:aliceblue; 
+    text-decoration: none;      
+}
+
+
+
+
+/* tabbed content */
+
+#tabbed-content{
+        width: 100%;
+        height: 80%;
+        flex: 1;
+        justify-content: center; 
+        /* background-color: rgba(255, 255, 255, 0.249); */
+        display: flex;
+        position: relative;         /* allow to show content below tabs */
+        top:10px;
+}
+input{
+    display: none;      /* hide the  radio butttons */
+}
+.tab-name{
+    max-height: 50px;
+    padding: 10px 70px;
+    margin: 0.5px;
+    background-color: black;
+    color: aliceblue;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+input:checked + label .tab-name{
+    background-image: linear-gradient(90deg, rgb(236, 117, 6),rgb(239, 193, 7));
+    color: #000;
+    font-size: 16px;
+    font-weight: bolder;
+    border-top-left-radius: 10px;      /* give curve shape in top corners  right and  left */
+    border-top-right-radius: 10px;
+    
+}
+
+.content{
+    position: absolute;
+    top:50px;
+    /* left: 33%; */
+    left: 0;
+    right: 0;
+    padding: 20px;
+    display: none;      /* hide the  content when unchecked */
+
+    background-image: linear-gradient(90deg, rgb(240, 195, 153),rgb(239, 193, 7));
+    
+    color: rgb(42, 42, 42);
+    max-width: 650px;
+    min-height: 700px;
+    margin: 0 auto;
+    justify-content: center;  /* show the content center of the pages */
+    align-items: center;
+    font-size: 30px;
+    border-radius: 20px;
+}
+
+input:checked + label .content{
+    display: flex;         /* reveal hidden content when radio checked */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    background-color: black;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+
+
