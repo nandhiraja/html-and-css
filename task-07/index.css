@@ -52,7 +52,7 @@ nav{
     justify-self: center;
     margin-top: 40px;   
     width: 1200px;
-    height: 500px; 
+    height: 600px; 
     overflow-x: auto;
     display: flex;
 
@@ -74,7 +74,6 @@ nav{
 
 #carousel::-webkit-scrollbar{
     display: none;
-    /* visibility: hidden; */
 }
 
 .card{
@@ -110,18 +109,63 @@ nav{
 
 
 @keyframes slide {
+    
 
     from{
         translate: 0;
     }
     to {
         translate: -100%;
+        
     }
     
 }
 
 
 
+/* Mobile view */
+
+@media  (max-width:728px) {
 
 
+    nav{
+    min-height: 40px;
+    display: flex;       
+    column-gap:5px;
+    align-items: center;
+    box-shadow: 10px 0px 30px;
+    padding: 20px 0px;
+}
+
+    #head{
+    display: none;
+   
+    
+}
+    
+#carousel{        /* outer layout of carousel cards */
+    justify-self: center;
+    margin-top: 40px;   
+    width: 350px;
+    height: 300px; 
+    overflow-x: auto;
+    display: flex;
+
+
+}
+
+.card{
+
+    flex:0 0 2em; 
+    height: 250px;  
+
+
+}
+   .card img{
+    width: 200px;
+    height: 200px;
+    max-width: 300px;
+}
+ 
+}
 
