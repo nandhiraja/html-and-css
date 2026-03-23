@@ -1,0 +1,215 @@
+body{
+    background-color: rgb(248, 248, 248);
+    margin:0px;    
+}
+
+header{
+
+    background-color: rgb(81, 205, 247);
+    min-height: 5em;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main{
+    margin: 3% 10%;
+    border-radius: 20px;
+    justify-items: center;
+    box-shadow: 0 20px 20px -1px;
+
+}
+#best-items{
+    color:red;
+}
+#items{
+    display: grid;    /* allow Grid layout */
+    grid-template-columns: repeat(2,600px);  /* double column with 600px size of each columns */
+    height: 100%;
+    
+}
+.card-image{
+    width: 25rem;
+    height: 22rem;
+    background-color: azure;
+    transition: transform 0.5s;   
+
+}
+.card{
+    background-color: rgb(213, 213, 213);
+    border-radius: 25px;
+    margin: 20px;
+    padding: 30px;
+    /* max-width: 25rem; */
+    width: 70%;
+    justify-items: center; 
+    box-shadow: 0 15px 35px -10px ;
+    transition: transform 0.5s ;     /* give smoother transition while hover */ 
+}
+
+/* Hover effect for card change color and  scale */
+.card:hover{
+    background-color: rgb(40, 40, 40);
+    transform: scale(1.02);    /* scale up the card on hovering */
+    color: white;    
+}
+.card:hover .card-image{
+    transform: scale(0.9);    /* scale down the image while hover */
+}
+
+.card-title{
+    font-size: 40px;
+    font-weight: bolder;
+    padding: 30px;
+}
+.card-description{
+    padding: 20px;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+
+/*  cart styling  with model :target */
+
+
+#cart-img{
+    position: relative;
+    right: 40px;
+    width: 30px;
+    height: 30px;
+
+}
+
+
+#cart{
+    width: 100%;
+    height: 200%;
+    background-color: rgba(48, 48, 49, 0.784);
+    justify-self:center;
+    top: 0px;
+    position: absolute;     /* to make oververlap on others  bring forward */
+    z-index: 1;      /* make sure card hover effect  not affect the cart view */
+    display: none;
+
+
+}
+#model{
+    width: 600px;
+    height:600px;
+    align-self:center;
+    justify-self: center;
+    background-color: rgb(247, 249, 248);
+    border-radius: 30px;
+    position: sticky;      /* enable stick on same view */
+    top: 20%;               /* top space to aling in center  */
+    box-shadow: 10px 100px 400px  black;
+
+}
+
+#header{
+    padding: 20px;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content:space-between;
+    font-size: 19px;
+
+
+}
+#close-btn{   /* button to close the cart */
+
+     position: relative;
+     right:20px;
+     text-decoration-line: none;     /* remove the  <a> underline */
+     font-size: 30px;
+     font-weight: bolder;
+     color: rgb(251, 250, 250);
+     padding: 3px 10px;
+     border-radius:10px;
+     background-color: red;
+     
+
+    }
+
+#title{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#content{
+    justify-self: center;
+    font-size: larger;
+    padding: 10px;
+    background-color: aquamarine;
+    margin-top: 30%;
+}
+
+#cart:target{
+    display: block;        /*  allow to visible cart as popup */
+}
+
+/* responsive UI  for  device  width 500px   */
+
+@media only screen and  (min-width:300px ) and (max-width:700px ) {
+    main{
+        background-color: rgba(255, 255, 255, 0) ;
+        margin: 2% 0%;
+
+
+    }
+    .card{
+        max-width: 15rem;
+        max-height: 25rem;
+        font-size: 12px;
+    }
+    .card-image{
+        width: 15rem;
+        height: 13rem;
+    }
+
+    .card-title{
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 20px;
+}
+.card-description{
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+#items{
+    display: grid;
+    grid-template-columns: repeat(1,400px); /* single column with 400px size of columns */
+    justify-items:center ;
+}
+
+}
+
+/* responsive UI  for  device  width 800px */
+
+@media only screen and  (min-width:800px) {
+    main{
+        background-color: rgba(255, 255, 255, 0) ;
+    }
+    .card{
+        max-width: 25rem;
+        max-height: 40rem;
+        font-size: 12px;
+    }
+    .card-image{
+        width: 25rem;
+        height: 24rem;
+    }
+
+    .card-title{
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 20px;
+}
+.card-description{
+    padding: 20px;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+}
