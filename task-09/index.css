@@ -109,9 +109,6 @@ nav > ul>li:last-child:hover{
 
 
 
-
-
-
 aside{
     margin-top: 3rem;
     grid-area: aside;
@@ -121,14 +118,14 @@ aside{
     position: fixed;
     right:0;
     top: 3rem;
-    /* width: 200px; */
+        /* width: 200px; */
+        box-shadow: 0px 10px 34px;
+
 }
 
 #top-sales-img{
-    /* background-color: aliceblue; */
     width: 50%;
     position: absolute;
-    /* z-index: 1442324; */
     right: 2rem;
     top: -4rem;
 }
@@ -137,32 +134,49 @@ aside{
     margin: 5rem 2rem;
     width:400px;
     height: 500px;
-    /* background-color: blueviolet; */
+    display: flex;
+    gap:1rem;
+    overflow-x: auto;
+
 
 }
 .group{
     display: flex;
     gap: 1rem;
     height: 100%;
-    /* background-color: rgba(245, 222, 179, 0.152); */
-    overflow-x: auto;
+  
 }
-.group::-webkit-scrollbar{
+#carousel::-webkit-scrollbar{
     display: none;
 }
-.card{    
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgba(240, 248, 255, 0.427);
-    box-shadow: 2px 1px 10px ;
+    /* box-shadow: 2px 1px 10px ; */
+    border-radius: 12px;
+    animation: slide 20s infinite linear;    /* for carousel animantion */
+
 
 
 }
 .card-img{
-    width: 30em;
+    width: 23em;
     
 
 }
 
 
+
+@keyframes slide {    /* to make a card animation for top sales */
+    from{
+        translate: 0;
+    }to{
+        translate: -100%;
+    }
+    
+}
 
 
 
