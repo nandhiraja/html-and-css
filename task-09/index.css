@@ -185,18 +185,66 @@ aside{
 
 
 
-main{
-    width: 100%;
-    height: 100%;
-    background-color: rgba(216, 216, 245, 0.382);
-}
+
+
+
 #top-main{
         grid-area: main;
         min-height: 40rem;
         background-color: rgba(240, 248, 255, 0.516);
-
+        display: grid;
+        grid-template-columns: 2fr 1fr;
 
     }
+
+#intro{
+    justify-items: center;
+    align-content: center;
+    font-size: 20px;
+    min-height: 100%;
+    padding: 1rem 6rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    h1{
+        justify-self: start;
+    }
+    p{
+        padding: 1em 1em;
+    }
+}
+
+
+#purchase-btn {
+    justify-self: end;
+    padding: 1rem;
+    margin: 1rem 2rem;
+    background: linear-gradient(90deg, rgb(232, 113, 2) ,rgb(239, 170, 43));
+    border-radius: 20px;
+    a{
+       text-decoration-line: none;
+       color: white;
+    }
+}
+#intro-img{
+justify-self: center;
+align-self: center;
+justify-content: stretch;
+align-items: stretch;
+
+}
+
+#purchase-btn:hover{
+    background: linear-gradient(90deg, rgb(62, 99, 2) ,rgb(107, 139, 25));
+}
+
+
+#shoping-img{
+    width: 45rem;
+}
+
+
+
+
+
 #bottom-main{
         grid-area: bottom-main;
         height: 55rem;
