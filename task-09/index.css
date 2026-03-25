@@ -20,9 +20,11 @@ body{
 
 nav{
     grid-area: navbar;
-    background: linear-gradient(180deg ,rgb(240, 225, 161), rgb(247, 212, 218));
+    background: linear-gradient(90deg ,rgb(240, 200, 113), rgb(246, 164, 177));
     box-shadow: 12px 13px 50px rgb(85, 79, 66);
     padding: 0;
+    position: sticky;   /* allow navbar to stick in top */
+    top: 0;
             
 }
 nav > ul {
@@ -32,20 +34,83 @@ nav > ul {
 nav > ul >li{
     list-style: none;
     padding: 1rem 2rem;
+    background-color: antiquewhite;
+    margin: 0rem .4rem;
+    border-radius: 12px;    
+    position: relative;   
+
 } 
 
+nav > ul>li:last-child{
+    left: 67%;
+}
 
 nav> ul > li > a{
     text-decoration-line: none;
-    border-bottom: 3px ridge rgb(243, 86, 42);
+    /* border-bottom: 3px ridge rgb(243, 86, 42); */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: black;   
+    color: black;
 
 }
 
 .sub{
-    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    top:3em;
+    visibility: hidden;
+
 }
+.sub>li{
+        
+        border-bottom: 2px solid;
+        padding: 1rem 3rem;
+        list-style-type: none;
+        font-size: 18px;
+        font-weight: bolder;
+
+        input{
+            display: none;
+        };
+        
+    }
+
+nav > ul > li:hover{
+    background-color: rgb(27, 29, 29);
+    border-radius: 12px;
+    
+    a{
+            color: white;
+
+        border-bottom:none ;
+    }
+    transition: background-color 1s ease;
+}
+
+nav > ul>li:last-child:hover{
+    background-color: red;
+}
+
+
+.has-sub:hover .sub {
+    visibility: visible;
+}
+
+.sub >li:hover {
+    background-color: blue;
+    color: white;
+}
+
+
+.sub >li input:checked+label {
+    color: rgb(218, 48, 48);
+}
+
+
+
+
+
+
 
 aside{
     grid-area: aside;
@@ -69,6 +134,13 @@ main{
         height: 55rem;
         background-color: rgba(127, 255, 212, 0.262);
 }       
+
+
+
+
+
+
+
 
 footer{
     grid-area: footer;
