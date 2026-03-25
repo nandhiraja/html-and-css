@@ -383,6 +383,8 @@ align-items: stretch;
 }
 
 footer{
+    display: flex;
+    flex-direction: column;
     grid-area: footer;
     height: 100%;
     width: 100%;
