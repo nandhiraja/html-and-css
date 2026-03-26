@@ -213,9 +213,10 @@ nav  #active{
 
 
 .card{
-    background-color: bisque;
+    background-color: rgba(236, 235, 233, 0.612);
     width: 25rem;
     height: 55vh;
+    margin-bottom: 3rem;
     padding: .6rem;
     display: grid;
     border-radius: 20px;
@@ -258,8 +259,9 @@ nav  #active{
 }
 
 .details{
-     border-top: 3px solid rgba(79, 78, 78, 0.356);
-    padding: 2rem;
+     /* border-top: 3px solid rgba(79, 78, 78, 0.356); */
+    padding: 1rem 2rem ;
+    /* padding-bottom: 2rem; */
     display: flex;
     flex-direction: column;
 }
@@ -271,10 +273,11 @@ nav  #active{
 
 .card:hover{
     transform: scale(1.03);
+    background-color: antiquewhite;
 
 }
 
 .buy:hover{
-
     transform: scale(1.2);
 }
+
