@@ -1,0 +1,213 @@
+#  Interactive Multi-Page Website Simulator with CSS Only
+
+
+## Objective: 
+  Create a fully functional, multi-section website that
+simulates the experience of navigating between different pages—all
+without any JavaScript.
+
+## Requirements:
+
+-Use the Reads `:target` pseudo-class to display and hidedifferent
+“pages” or sections of content.
+- Incorporate CSS animations and transitions to simulate page transitions (such as fading or sliding effects)
+- Design an accessible navigation menu that works across different devices and screen sizes.
+- Ensure that the entire experience is responsive and leverages advanced CSS techniques (e.g., combining Flexbox, Grid, and pseudo-classes) to manage layout and state transitions
+
+
+##  Interactive Multi-Page Website Simulator with CSS Only
+
+
+``` html 
+ <!-- Nav bar  -->
+     <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li class="has-sub"><a >Brands</a>
+                    <ul class="sub">
+                        <li><input type="radio" class="sub-opt" name="option" id="1" checked> 
+                            <label  for="1">
+                             <div>Lenova</div>
+                            </label>
+                        </li>
+                         .
+                         .
+                         .
+                        <li><input type="radio" class="sub-opt" name="option" id="3"> 
+                            <label  for="3">
+                                <div>Sonny</div>
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+<!-- top -seller z-index sticky card -->
+
+  <aside>      <!-- carousel for top sales -->
+      <img id="top-sales-img"src="images/top-sales.png" alt="Top sales items">
+            <div id="carousel">
+                <div class="group">
+                    <div class="card">
+                        <img class="card-img" src="images/lenovo-laptop.png">
+                    </div>
+                     .
+                     .
+                     <div class="card">
+                        <img class="card-img" src="images/sony-headphone.png">
+                    </div>
+                </div>
+
+                 <div aria-hidden class="group">
+                    <div class="card">
+                        <img class="card-img" src="images/lenovo-laptop.png">
+                    </div>
+                   .
+                   .
+                   .
+                </div>
+            </div>
+        </aside>
+
+<!-- main page -->
+
+ 
+        <section id="top-main">
+            <div id="intro">
+              .
+              .
+              .
+            </div>
+            <div id="intro-img">
+               .
+               .
+            </div>
+
+
+        </section>
+        <aside>      <!-- carousel for top sales -->
+            .
+            .
+            .
+            .
+        </aside>
+        <section id="bottom-main">
+
+            <div id="shoping-image-overlap">
+                <img src="images/Voice-AI-Phone-Ordering.jpg" alt="Voice-AI-Phone-Ordering">
+            </div>
+                .
+                .
+                .
+             <section id="shoping-process">
+           
+                 <div class="process-steps">    <!-- Process steps for online orders -->
+
+                   .
+                   .
+                   .
+                
+                </div> 
+            </section>
+
+        </section>
+
+    <!-- Last section brand carousel  -->
+
+       <section id="last-section">      <!-- carousel for brand names-->
+         <div id="carousel-brands">      
+                <div class="group-brands">
+                    <div class=" card-brand">
+                        <img class=" card-brand-img" src="images/brands/lenovo.png">
+                    </div>
+                    .
+                    .
+                    .
+                      <div class=" card-brand">
+                        <img class=" card-brand-img" src="images/brands/hp.png">
+                    </div>
+                      <div class=" card-brand">
+                        <img class=" card-brand-img" src="images/brands/xiomi.png">
+                    </div>
+                </div>
+               
+        </div>
+
+    </section>      
+
+
+```
+
+
+## CSS Complex Responsive Layout with Grid and Flexbox
+
+``` css 
+body{
+    .
+    .
+    .
+    /* Grid layout for navbar , main section , footer */
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto 1fr auto auto auto;
+    grid-template-areas:
+    "navbar navbar" 
+    "main aside" 
+    "bottom-main bottom-main"
+    "last-section last-section"
+    "footer footer"; 
+
+    overflow-x: hidden;
+}
+
+nav{
+    grid-area: navbar;    /* grid area name for body identification */
+    position: sticky;   /* allow navbar to stick in top */
+    top: 0;
+    z-index: 10;   /*  to show top of all other components*/
+}
+
+
+aside{
+    grid-area: aside;
+    .
+    .
+    position: relative;   /* adjust form orginal position */
+    z-index: 11;   
+    position: fixed;  /* fixed position avoid scroll on scrolling */ 
+   
+    top: 3rem;
+    .
+    .
+}
+
+
+.card{
+    display: flex;   /* flex to alling all cards in linear order */
+    justify-content: center;
+    align-items: center;
+   
+    animation: slide 20s infinite linear;    /* for carousel animantion */
+
+}
+
+@keyframes slide {    /* to make a card animation for top sales */
+    from{
+        translate: 0;
+    }to{
+        translate: -100%;
+    }
+    
+}
+
+```
+
+
+# Desktop view
+
+
+
+
+
