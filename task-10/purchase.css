@@ -19,6 +19,7 @@ body{
     "purchase purchase";
     /* box-sizing: border-box; */
     overflow-x: hidden;
+    overflow-y: auto;
 
 }
 
@@ -146,7 +147,7 @@ nav  #active{
 #filters{
     grid-area: filter;
     position: fixed;
-    background-color: rgba(240, 248, 255, 0.563);
+    background-color: rgba(249, 251, 252, 0.844);
     padding: 1rem;
     border-right: 3px ridge black;
     border-radius: 22px;
@@ -214,15 +215,18 @@ nav  #active{
 .card{
     background-color: bisque;
     width: 25rem;
-    height: 50vh;
+    height: 55vh;
     padding: .6rem;
     display: grid;
     border-radius: 20px;
     box-shadow: 2px 1px 40px rgba(82, 81, 79, 0.468);
+    transition: transform .7s ease-out;
+
     img{
         justify-self: center;
         width: 80%;
         height: 30vh;
+        transition: transform .8s ease-out;
     }
 
     .card-title{
@@ -237,14 +241,40 @@ nav  #active{
     }
 
     a{
-        position: relative;
-        right:-16rem;
+       
+        justify-self: end;
+        align-self:flex-end;
         width: fit-content;
         border-radius: 10px;
         text-decoration-line: none;
         color: white;
-        padding: 1rem 2rem;
-        background-color: red;
+        padding: .5rem 1.5rem;
+        font-size: 16px;
+        align-content: center;
+        transition: transform .3s ease-out;
+
+        background: linear-gradient(90deg, red, rgb(240, 135, 6));
     }
 }
 
+.details{
+     border-top: 3px solid rgba(79, 78, 78, 0.356);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.card-image:hover{
+    transform: scale(1.1);
+}
+
+.card:hover{
+    transform: scale(1.03);
+
+}
+
+.buy:hover{
+
+    transform: scale(1.2);
+}
