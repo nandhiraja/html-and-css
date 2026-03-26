@@ -123,8 +123,127 @@ nav  #active{
 
 main{
     grid-area: main;
-    height: 100vh;
+    margin: 3rem 2rem;
+    /* height: 100vh; */
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-self: center;  
+    gap:3rem;  
 }
+
+
+
+.content{
+  width: 90%;
+  padding :3rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 2rem;
+  }
+  background-color: rgba(254, 254, 254, 0.6);
+  border-radius: 40px;
+
+  h4{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 70%;
+    font-size: 23px;
+    padding: 3rem;
+  }
+}
+
+#why-to-choose{
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about{
+    background-color: rgba(0, 255, 255, 0.397);
+}
+
+#cta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: 80%;
+        height: 60%;
+        background-color: rgba(105, 7, 216, 0.763);
+        box-shadow: 2px 2px 14px;
+        border-radius: 20px;
+    }
+    a{  position: relative;
+        /* left: 24rem; */
+        top :-3rem;
+        width: fit-content;
+        border-radius: 30px;
+        font-size: 30px;
+        text-decoration: none;
+        padding: 2rem 4rem;
+        background: linear-gradient(90deg, red, orange);
+        
+    }
+}
+
+#list{
+    /* padding-left: 5rem ; */
+    list-style: none;
+    font-size: larger;
+}
+#list > li{
+    padding: .5rem;
+}
+
+#about{
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ p{  
+
+        width: 70%;
+        font-weight: 500;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        padding: 1rem;
+        /* padding-left: 5rem; */
+        font-size: 20px;
+    }
+#journey{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    img{
+        width: 90%;
+        justify-content: center;
+        align-items : center;
+    }
+}
+
+
+#vision-mission{
+    
+    justify-content: center;
+}
+#vision{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: center;
+}
+
+#mission{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 
 footer{
     grid-area: footer;
@@ -133,3 +252,4 @@ footer{
     justify-items: center;
     padding: 2rem;    
 }
+
