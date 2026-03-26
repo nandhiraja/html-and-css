@@ -128,38 +128,33 @@ nav  #active{
 
 #purchase-area {
     grid-area: purchase;
+    /* padding:  2rem 2rem; */
     display: grid;
-    margin: 0 auto;
-    min-width: 90%;
-    min-height: auto;
-    background-color: rgba(247, 247, 247, 0.938);
+    margin: 2rem auto;
+    min-width: 80%;
+    max-width: 90%;
+    /* min-height: 90%; */
+
+    /* background-color: rgba(243, 243, 243, 0.938); */
     border-radius: 10px;
 
-    box-shadow: 1px 2px 14px rgba(73, 72, 70, 0.312);
+    /* box-shadow: 1px 2px 14px rgba(73, 72, 70, 0.312); */
     grid-template-columns: .7fr 2fr;
     grid-template-areas: "filter products";
 }
 
 #filters{
     grid-area: filter;
-    width: 98%;
-    height: 90%;
-    margin: auto auto;
-    padding: 2rem;
+    position: fixed;
+    background-color: rgba(240, 248, 255, 0.563);
+    padding: 1rem;
     border-right: 3px ridge black;
     border-radius: 22px;
 
     /* background-color: rgb(247, 244, 240); */
 }
 
-#products {
-    grid-area:products;
-    width: 98%;
-    margin: auto auto;
-    max-height: 90%;
-    /* background-color: rgba(144, 202, 253, 0.081); */
 
-}
 
 #price-range{
     padding: 1rem;
@@ -195,3 +190,61 @@ nav  #active{
 .filter-btn{
     font-size: large;
 }
+
+
+
+
+#products {
+    grid-area:products;
+    box-shadow: 1px 2px 14px rgba(73, 72, 70, 0.312);
+
+    max-width: 98%;
+    padding: 2rem;
+   border-radius: 30px;
+   background-color: rgba(246, 247, 248, 0.633);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
+    
+
+}
+
+
+.card{
+    background-color: bisque;
+    width: 25rem;
+    height: 50vh;
+    padding: .6rem;
+    display: grid;
+    border-radius: 20px;
+    box-shadow: 2px 1px 40px rgba(82, 81, 79, 0.468);
+    img{
+        justify-self: center;
+        width: 80%;
+        height: 30vh;
+    }
+
+    .card-title{
+        padding: .5rem;
+        font-size: 20px;
+        font-weight: 900;
+    }
+    .card-description {
+        padding: .8rem;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    a{
+        position: relative;
+        right:-16rem;
+        width: fit-content;
+        border-radius: 10px;
+        text-decoration-line: none;
+        color: white;
+        padding: 1rem 2rem;
+        background-color: red;
+    }
+}
+
