@@ -1,0 +1,399 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+
+
+}
+
+body{
+    background: linear-gradient(90deg, rgb(250, 250, 224), rgb(246, 233, 212));
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto 1fr auto auto auto;
+    gap: 1rem;
+    grid-template-areas:
+    "navbar navbar" 
+    "main aside" 
+    "bottom-main bottom-main"
+    "last-section last-section"
+    "footer footer"; 
+    /* box-sizing: border-box; */
+    overflow-x: hidden;
+
+}
+
+
+nav{
+    grid-area: navbar;
+    background: linear-gradient(90deg ,rgb(240, 200, 113), rgb(246, 164, 177));
+    box-shadow: 12px 13px 50px rgb(85, 79, 66);
+    padding: 0;
+    position: sticky;   /* allow navbar to stick in top */
+    top: 0;
+    z-index: 10;
+            
+}
+nav > ul {
+    display: flex;
+    padding: .5rem;
+}
+nav > ul >li{
+    list-style: none;
+    padding: 1rem 2rem;
+    background-color: antiquewhite;
+    margin: 0rem .4rem;
+    border-radius: 12px;    
+    position: relative;   
+
+} 
+
+nav > ul>li:last-child{
+    left: 67%;
+}
+
+nav> ul > li > a{
+    text-decoration-line: none;
+    /* border-bottom: 3px ridge rgb(243, 86, 42); */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+
+}
+
+.sub{
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    top:3em;
+    visibility: hidden;
+
+}
+.sub>li{
+        
+        border-bottom: 2px solid;
+        padding: 1rem 3rem;
+        list-style-type: none;
+        font-size: 18px;
+        font-weight: bolder;
+
+        input{
+            display: none;
+        };
+        
+    }
+
+nav > ul > li:hover{
+    background-color: rgb(27, 29, 29);
+    border-radius: 12px;
+    
+    a{
+            color: white;
+
+        border-bottom:none ;
+    }
+    transition: background-color 1s ease;
+}
+
+nav > ul>li:last-child:hover{
+    background-color: red;
+}
+
+
+.has-sub:hover .sub {
+    visibility: visible;
+}
+
+.sub >li:hover {
+    background-color: blue;
+    color: white;
+}
+
+
+.sub >li input:checked+label {
+    color: rgb(218, 48, 48);
+}
+
+
+
+
+aside{
+    margin-top: 3rem;
+    grid-area: aside;
+    background: #f1a33ef2;
+    position: relative;
+    z-index: 11;
+    position: fixed;
+    right:0;
+    top: 3rem;
+        /* width: 200px; */
+    box-shadow: 0px 10px 34px rgba(0, 0, 0, 0.495);
+    border-bottom-left-radius: 30px;
+
+
+}
+
+#top-sales-img{
+    width: 50%;
+    position: absolute;
+    right: 2rem;
+    top: -4rem;
+}
+
+#carousel{
+    margin: 5rem 2rem;
+    width:400px;
+    min-height: 15vh;
+
+    display: flex;
+    gap:1rem;
+    overflow-x: auto;
+
+
+}
+.group{
+    display: flex;
+    gap: 1rem;
+    height: 100%;
+  
+}
+#carousel::-webkit-scrollbar{
+    display: none;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(240, 248, 255, 0.427);
+    /* box-shadow: 2px 1px 10px ; */
+    border-radius: 12px;
+    animation: slide 20s infinite linear;    /* for carousel animantion */
+
+
+
+}
+.card-img{
+    width: 23em;
+    
+
+}
+
+
+
+@keyframes slide {    /* to make a card animation for top sales */
+    from{
+        translate: 0;
+    }to{
+        translate: -100%;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+#top-main{
+        grid-area: main;
+        margin: 1rem 3rem;
+        min-height: 40rem;
+        background-color: rgba(240, 248, 255, 0.516);
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        box-shadow:-1px 3px 20px rgb(179, 150, 97);
+
+
+    }
+
+#intro{
+    
+    justify-items: center;
+    align-content: center;
+    font-size: 20px;
+    min-height: 100%;
+    padding: 1rem 6rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    h1{
+        justify-self: start;
+    }
+    p{
+        padding: 1em 1em;
+    }
+}
+
+
+#purchase-btn {
+    justify-self: end;
+    padding: 1rem;
+    margin: 1rem 2rem;
+    background: linear-gradient(90deg, rgb(232, 113, 2) ,rgb(239, 170, 43));
+    border-radius: 20px;
+    a{
+       text-decoration-line: none;
+       color: white;
+    }
+}
+#intro-img{
+justify-self: center;
+align-self: center;
+justify-content: stretch;
+align-items: stretch;
+
+}
+
+#purchase-btn:hover{
+    background: linear-gradient(90deg, rgb(62, 99, 2) ,rgb(107, 139, 25));
+}
+
+
+#shoping-img{
+    width: 45rem;
+}
+
+
+
+
+
+#bottom-main{
+        grid-area: bottom-main;
+        height: 100%;
+        margin: 0rem 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .4fr 1fr;
+        grid-template-areas: 
+        "shoping shoping-image"
+         " process-content process-image";
+        /* background-color: rgba(157, 233, 214, 0.685); */
+        position: relative;
+}       
+
+#shoping-image-overlap{
+    /* justify-self: center; */
+    grid-area: shoping-image;
+    height: 100px;
+    position:relative ;
+    top:-6rem;
+    img{
+        border-bottom-left-radius: 30px;
+        border-top-right-radius: 10px;
+        width: 50vw;
+    }
+    left :0rem;
+}
+
+
+
+#shoping-process-image{
+    grid-area: process-image;
+    /* background-color: azure;  */
+    /* height: 100%; */
+    justify-items: center;
+    align-content: center;
+    img{
+        width: 40vw;
+
+        /* height: 100vh; */
+    }
+}
+
+#shoping-process{
+    grid-area: process-content;
+    
+}
+.process-steps{
+    background-color: rgba(241, 242, 243, 0.722);
+    border-radius: 20px;
+    justify-self: center;
+    align-self: center;
+    padding: 30px;
+    border-left: 2px solid red;
+    box-shadow: 1px 1px 8px;
+}
+
+.step{
+    padding: 20px;
+    h3{
+        padding:10px;
+        background-color: rgb(3, 114, 64);
+        color: white;
+        text-align: center;
+        border-radius: 20px;
+        width: 10rem;
+    }
+    p{
+        padding: 20px 10px ;
+        font-size: large;
+        position: relative;
+        left: 1rem;
+    }
+    
+}
+
+.process-steps>.step:nth-last-child  h3{
+    background-color: blueviolet;
+}
+
+
+
+
+#last-section{
+    grid-area:last-section;
+    margin: 10rem 10rem;
+}
+
+
+#carousel-brands{
+    display: flex;
+    overflow-x: auto;
+
+}
+
+#carousel-brands::-webkit-scrollbar{
+    display: none;
+}
+.group-brands{
+    display: flex;
+}
+
+.card-brand{
+    width: 10rem;
+    height: 10rem;
+    background-color: rgb(246, 217, 100);
+    margin:1rem;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    border-radius: 30px;
+    animation: slide 10s infinite linear;
+
+}
+
+.card-brand-img{
+    width: 6rem;
+
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    grid-area: footer;
+    height: 100%;
+    width: 100%;
+    padding: 1rem 0rem;
+
+    background-color: black ;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
