@@ -3,7 +3,8 @@
 
 <head>
   <title> Task-10 Multipage responsive Website using Grid and flexbox  </title>  
-  <link rel="stylesheet" href="./index.css">
+  <!-- <link rel="stylesheet" href="./index.css"> -->
+  <link rel="stylesheet" href="./purchase.css">
   <meta name="viewport" content="width=device-width">
 </head>
 
@@ -41,6 +42,50 @@
     
     <section id="purchase-area">
         <aside id="filters">
+            <h1>Filters</h1>
+            <div id="price-range">
+                <input type="checkbox" id="range-low">
+                <label for="range-low">Low </label>
+                <input type="checkbox" id="range-mid">
+                <label for="range-mid">Mid </label>
+                <input type="checkbox" id="range-high">
+                <label for="range-high">High</label>
+            </div>
+            <div id="search-box">
+                <h4>Search :</h4>
+                <input type="search" placeholder="search items"> 
+            </div>
+            <div id="brand-filter">
+                <div class="filter-btn">
+                    <input type="checkbox" id="sony">
+                    <label for="sony">Sony </label>
+                </div>
+
+                <div class="filter-btn">
+                    <input type="checkbox" id="apple">
+                    <label for="apple">Apple </label>
+                </div>
+
+                <div class="filter-btn">
+                    <input type="checkbox" id="hp">
+                    <label for="hp">Lenova</label>
+                </div>
+
+                <div class="filter-btn">
+                   <input type="checkbox" id="mi">
+                   <label for="mi">MI </label>
+                </div>
+
+                <div class="filter-btn">
+                    <input type="checkbox" id="acer">
+                    <label for="acer">Acer </label>
+                </div>
+
+                <div class="filter-btn">
+                    <input type="checkbox" id="samsung">
+                    <label for="samsung">Samsung</label>
+                </div>
+            </div>
 
         </aside>
         <aside id="products">
@@ -49,10 +94,7 @@
         
     </section>      
 
-    <footer>
-        <h4>copyrights@2026</h4>
-        <h5>shopify.com</h5>
-    </footer>
+  
 
 
 
