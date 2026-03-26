@@ -1,0 +1,135 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+
+
+}
+
+body{
+    background: linear-gradient(90deg, rgb(250, 250, 224), rgb(246, 233, 212));
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto 1fr  auto;
+    gap: 1rem;
+    grid-template-areas:
+    "navbar navbar"
+    "main main" 
+    "footer footer";
+    overflow-x: hidden;
+    overflow-y: auto;
+
+}
+
+
+nav{
+    grid-area: navbar;
+    background: linear-gradient(90deg ,rgb(240, 200, 113), rgb(246, 164, 177));
+    box-shadow: 12px 13px 50px rgb(85, 79, 66);
+    padding: 0;
+    position: sticky;   /* allow navbar to stick in top */
+    top: 0;
+    z-index: 10;
+            
+}
+nav > ul {
+    display: flex;
+    padding: .5rem;
+}
+nav > ul >li{
+    list-style: none;
+    padding: 1rem 0rem;
+    background-color: antiquewhite;
+    margin: 0rem .4rem;
+    border-radius: 12px;    
+    position: relative;   
+
+} 
+
+nav > ul>li:last-child{
+    left: 67%;
+}
+
+nav> ul > li > a{
+    text-decoration-line: none;
+    padding: 1rem 2rem;
+
+    /* border-bottom: 3px ridge rgb(243, 86, 42); */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+
+}
+
+.sub{
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    top:3em;
+    visibility: hidden;
+
+}
+.sub>li{
+        
+        border-bottom: 2px solid;
+        padding: 1rem 3rem;
+        list-style-type: none;
+        font-size: 18px;
+        font-weight: bolder;
+
+        input{
+            display: none;
+        };
+        
+    }
+
+nav > ul > li:hover{
+    background-color: rgb(27, 29, 29);
+    border-radius: 12px;
+    
+    a{
+        color: white;
+
+        border-bottom:none ;
+    }
+    transition: background-color 1s ease;
+}
+
+nav > ul>li:last-child:hover{
+    background-color: red;
+}
+
+nav  #active{ 
+    background-color: rgb(34, 34, 34);
+    a{
+        color: aliceblue;
+    }
+}
+
+.has-sub:hover .sub {
+    visibility: visible;
+}
+
+.sub >li:hover {
+    background-color: blue;
+    color: white;
+}
+
+
+.sub >li input:checked+label {
+    color: rgb(218, 48, 48);
+}
+
+main{
+    grid-area: main;
+    height: 100vh;
+}
+
+footer{
+    grid-area: footer;
+    background-color: black;
+    color: white;
+    justify-items: center;
+    padding: 2rem;    
+}
