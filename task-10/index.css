@@ -41,7 +41,7 @@ nav > ul {
 }
 nav > ul >li{
     list-style: none;
-    padding: 1rem 2rem;
+    padding: 1rem 0rem;
     background-color: antiquewhite;
     margin: 0rem .4rem;
     border-radius: 12px;    
@@ -55,6 +55,8 @@ nav > ul>li:last-child{
 
 nav> ul > li > a{
     text-decoration-line: none;
+    padding: 1rem 2rem;
+
     /* border-bottom: 3px ridge rgb(243, 86, 42); */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: black;
@@ -88,7 +90,7 @@ nav > ul > li:hover{
     border-radius: 12px;
     
     a{
-            color: white;
+        color: white;
 
         border-bottom:none ;
     }
@@ -99,6 +101,12 @@ nav > ul>li:last-child:hover{
     background-color: red;
 }
 
+nav  #active{ 
+    background-color: rgb(34, 34, 34);
+    a{
+        color: aliceblue;
+    }
+}
 
 .has-sub:hover .sub {
     visibility: visible;
@@ -117,7 +125,7 @@ nav > ul>li:last-child:hover{
 
 
 
-aside{
+#top-sales-aside{
     margin-top: 3rem;
     grid-area: aside;
     background: #f1a33ef2;
