@@ -140,7 +140,7 @@ user scrolls.
 ```
 
 
-## CSS to open close the FQA cards 
+## CSS Complex Responsive Layout with Grid and Flexbox
 
 ``` css 
 body{
@@ -206,8 +206,7 @@ aside{
 
 # Desktop view
 
+https://github.com/user-attachments/assets/3486aaf8-a2b1-41d3-8b85-e982bf9861c3
 
-
-## Mobile View
 
 
