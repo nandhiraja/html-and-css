@@ -208,6 +208,13 @@ aside{
 # Desktop view
 
 
+https://github.com/user-attachments/assets/ab2b7ce0-62b6-4cc2-b915-b6b290e3cf5e
+
+<img width="1892" height="970" alt="Image" src="https://github.com/user-attachments/assets/11cb7b17-0d8a-4122-81f6-828ed36a1e72" />
+
+<img width="1871" height="983" alt="Image" src="https://github.com/user-attachments/assets/8b976d2d-ed4a-46e0-936c-4ba43645e4d7" />
+
+<img width="1912" height="976" alt="Image" src="https://github.com/user-attachments/assets/0213509d-e4f0-4c85-96e9-d603b4117d70" />
 
 
 
